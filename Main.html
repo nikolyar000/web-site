@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .footer .hidden {
+          display: none;
+        }
+      </style>
+    <title>Meltem</title>
+</head>
+
+<body>
+
+    <nav class="container">
+        <a href="#" id="brand" class="logo">Meltem</a>
+        <div class="links">
+            <a href="#">Компанія</a>
+            <a href="#">Продукція</a>
+            <a href="#">Статті</a>
+            <a href="#">Рішення</a>
+            <a href="#">Контакти</a>
+        </div>
+        <div class="login">
+            <text class="signup">0(000)00-00-00</text>
+
+            <button onclick="openModal()" class="signup">Зв'язатися</button>
+
+            <button class="language">UA</button>
+            <button class="language.notactive">RU</button>
+        </div>
+        
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#" >Login</a></li>
+              <li><a href="#">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="left">
+            <h1>Meltem <span></span></h1>
+            <p>Meltem - це гарантовано якісне
+            <p>вентиляційне обладнання 
+            <p>від німецького заводу
+            </p>
+            <a href="#">
+                <span>Продукція</span>
+            </a>
+        </div>
+        <img src="assets/header.png">
+        <div class="right">
+            <p>Відцентровий витяжний 
+            <p>вентилятор
+            </p>
+            <h1>Meltem V-ll 30-N <span></span></h1>
+            <a href="#">
+                <span>Детальніше</span>
+            </a>
+        </div>
+    </header>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h1>Залишайте заявку</h1>
+    <p>Ми зв'яжемося з вами найближчим часом</p>
+    <div class="container">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+                <input type="text" placeholder="Ваше ім'я" required>
+            </div>
+          </div>
+        </form>
+        <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                  <input id="errorDiv" type="text" placeholder="+380-00-000-00-00" required>
+              </div>
+            </div>
+          </form>
+          <button onclick="openModal1()" class="signup1">Відправить</button>
+          <p>Натискаючи кнопку "Надіслати", ви погоджуєтесь з<div class="word-with-line">Правилами обробки персональних даних.</div></p>
+    </div>
+
+        </div>
+    </div>
+
+    <footer id="hideButton" class="container1">
+    <button id="myButton">Згоден</button>
+    <p>Використовуючи цей сайт, ви даєте 
+        згоду на роботу з файлами cookies</p>
+    </footer>
+    </div>
+
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+    <span onclick="closeModal1()" class="close">&times;</span>
+    <a href="#">
+        <i class='bx bx-check-circle'></i>
+    </a>
+    <h2>Дякуємо</h2>
+    <h2>за заявку</h2>
+    <p>Ваші дані успішно надіслані!</p>
+    </div>
+</body>
+<script src="index.js"></script>
+<script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      this.classList.add("hideButton");
+    });
+    </script>
+</html>
